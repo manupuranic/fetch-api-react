@@ -1,0 +1,20 @@
+label {
+  text-align: left;
+  display: block;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+input {
+  display: block;
+  width: 100%;
+  border: 1px solid #c1c1c1;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #c1c1c1;
+  border-radius: 5px;
+}
