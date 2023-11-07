@@ -2,7 +2,7 @@ import React from "react";
 import "./AddMovie.module.css";
 import { useState } from "react";
 
-const AddMovie = () => {
+const AddMovie = (props) => {
   const [formData, setFormData] = useState({
     title: "",
     openingText: "",
@@ -11,14 +11,18 @@ const AddMovie = () => {
 
   const onInputChange = (event) => {
     const updatedForm = { ...formData };
-    console.log(event.target.name);
     updatedForm[event.target.name] = event.target.value;
     setFormData(updatedForm);
   };
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    console.log(formData);
+    props.onAddMovie(formData);
+    setFormData({
+      title: "",
+      openingText: "",
+      releaseDate: "",
+    });
   };
 
   return (
